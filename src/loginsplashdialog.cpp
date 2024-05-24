@@ -7,7 +7,9 @@ LoginSplashDialog::LoginSplashDialog(QWidget *parent)
 {
     ui->setupUi(this);
     ui->password->setEchoMode(QLineEdit::Password);
-    this->setAttribute(Qt::WA_DeleteOnClose);
+    setAttribute(Qt::WA_DeleteOnClose);
+    setWindowTitle("Kash-nohv");
+    setWindowIcon(QIcon(":/textures/logo.png"));
 
     connect(ui->loginButton, SIGNAL(clicked(bool)),this, SLOT(doLogin()));
 }
@@ -21,5 +23,5 @@ void LoginSplashDialog::doLogin() {
     ui->loginButton->setEnabled(false);
     ui->loginButton->setText("正在连接到服务器...");
 
-    this->accept();
+    accept();
 }
