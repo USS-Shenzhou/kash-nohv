@@ -14,18 +14,25 @@ set(CMAKE_PREFIX_PATH "D:/Qt/6.6.3/mingw_64/lib/cmake")
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
-include_directories("libs/aliyun-oss-cpp-sdk/include")
-include_directories("libs/aliyun-oss-cpp-sdk/lib")
+include_directories(
+        "include"
+        "src"
+        "cmake-build-debug/kash-nohv_autogen"
+        "libs/aliyun-oss-cpp-sdk/include"
+        "libs/aliyun-oss-cpp-sdk/lib"
+)
 
 
 set(PROJECT_SOURCES
         src/main.cpp
-        src/kashnohv.cpp
-        include/kashnohv.h
-        kashnohv.ui
-        include/loginsplashdialog.h
-        src/loginsplashdialog.cpp
-        loginsplashdialog.ui
+
+        src/gui/window/kashnohv.cpp
+        include/gui/window/kashnohv.h
+        src/gui/window/kashnohv.ui
+
+        include/gui/window/loginsplashdialog.h
+        src/gui/window/loginsplashdialog.cpp
+        src/gui/window/loginsplashdialog.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

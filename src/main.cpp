@@ -1,5 +1,5 @@
-#include "../include/kashnohv.h"
-#include "../include/loginsplashdialog.h"
+#include "../include/gui/window/kashnohv.h"
+#include "../include/gui/window/loginsplashdialog.h"
 
 #include <QApplication>
 

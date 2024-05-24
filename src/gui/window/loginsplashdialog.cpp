@@ -1,5 +1,5 @@
-#include "../include/loginsplashdialog.h"
-#include "../ui_loginsplashdialog.h"
+#include "gui/window/loginsplashdialog.h"
+#include "ui_loginsplashdialog.h"
 
 LoginSplashDialog::LoginSplashDialog(QWidget *parent)
     : QDialog(parent)
