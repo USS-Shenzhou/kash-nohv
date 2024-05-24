@@ -1,8 +1,6 @@
 #include "../include/loginsplashdialog.h"
 #include "../ui_loginsplashdialog.h"
 
-using namespace AlibabaCloud::OSS;
-
 LoginSplashDialog::LoginSplashDialog(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::LoginSplashDialog)
