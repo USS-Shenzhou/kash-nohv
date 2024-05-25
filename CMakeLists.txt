@@ -30,6 +30,7 @@ include_directories(
 
 set(PROJECT_SOURCES
         src/oss/OssManager.ixx
+        src/oss/module.ixx
 
         src/main.cpp
 

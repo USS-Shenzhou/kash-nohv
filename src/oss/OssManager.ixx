@@ -2,7 +2,7 @@ module;
 
 #include "gui/window/loginsplashdialog.h"
 
-export module oss;
+export module oss.ossManager;
 
 export class OssManager {
 public:
