@@ -6,13 +6,19 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(CMAKE_PREFIX_PATH "D:/Qt/6.6.3/mingw_64/lib/cmake")
+set(CMAKE_PREFIX_PATH "D:/Qt/6.6.3/msvc2019_64/lib/cmake")
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+
+if (MSVC)
+    add_compile_options(/Zc:__cplusplus)
+else ()
+    add_compile_options(-fmodules-ts)
+endif()
 
 include_directories(
         "include"
@@ -22,8 +28,9 @@ include_directories(
         "libs/aliyun-oss-cpp-sdk/lib"
 )
 
-
 set(PROJECT_SOURCES
+        src/oss/OssManager.ixx
+
         src/main.cpp
 
         src/gui/window/kashnohv.cpp

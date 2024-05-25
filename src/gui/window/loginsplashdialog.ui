@@ -10,16 +10,22 @@
     <height>450</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>80</y>
-     <width>621</width>
-     <height>297</height>
+     <x>150</x>
+     <y>40</y>
+     <width>502</width>
+     <height>360</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -49,7 +55,191 @@
       <property name="sizeHint" stdset="0">
        <size>
         <width>20</width>
-        <height>20</height>
+        <height>30</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QComboBox" name="endpointSelect">
+      <property name="minimumSize">
+       <size>
+        <width>500</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>选择终结点</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>阿里云 华东1（杭州）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 华东2（上海）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 华东5（南京-本地地域）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 华东6（福州-本地地域）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 华中1（武汉-本地地域）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 华北1（青岛）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 华北2（北京）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 华北3（张家口）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 华北5（呼和浩特）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 华北6（乌兰察布）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 华南1（深圳）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 华南2（河源）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 华南3（广州）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 西南1（成都）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 香港特别行政区</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 美国（硅谷）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 美国（弗吉尼亚）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 日本（东京）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 韩国（首尔）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 新加坡</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 澳大利亚（悉尼）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 马来西亚（吉隆坡）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 印度尼西亚（雅加达）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 菲律宾（马尼拉）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 泰国（曼谷）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 印度（孟买）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 德国（法兰克福）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 英国（伦敦）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 阿联酋（迪拜）</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阿里云 无地域属性（中国内地）</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>15</height>
        </size>
       </property>
      </spacer>
@@ -65,7 +255,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>50</height>
+        <height>40</height>
        </size>
       </property>
       <property name="font">
@@ -89,7 +279,7 @@
       <property name="sizeHint" stdset="0">
        <size>
         <width>20</width>
-        <height>20</height>
+        <height>15</height>
        </size>
       </property>
      </spacer>
@@ -99,7 +289,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>50</height>
+        <height>40</height>
        </size>
       </property>
       <property name="font">
@@ -126,7 +316,7 @@
       <property name="sizeHint" stdset="0">
        <size>
         <width>20</width>
-        <height>20</height>
+        <height>15</height>
        </size>
       </property>
      </spacer>
@@ -143,8 +333,8 @@
         </property>
         <property name="minimumSize">
          <size>
-          <width>400</width>
-          <height>50</height>
+          <width>380</width>
+          <height>40</height>
          </size>
         </property>
         <property name="font">
