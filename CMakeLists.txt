@@ -30,6 +30,7 @@ include_directories(
 
 set(PROJECT_SOURCES
         src/oss/OssManager.ixx
+        src/oss/Endpoints.ixx
         src/oss/module.ixx
 
         src/main.cpp
@@ -41,6 +42,7 @@ set(PROJECT_SOURCES
         include/gui/window/loginsplashdialog.h
         src/gui/window/loginsplashdialog.cpp
         src/gui/window/loginsplashdialog.ui
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

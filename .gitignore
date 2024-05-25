@@ -73,5 +73,6 @@ CMakeLists.txt.user*
 *.exe
 
 /cmake-build-debug/
+!/cmake-build-debug/config/
 /.idea
 *.lib

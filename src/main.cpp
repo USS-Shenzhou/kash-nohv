@@ -3,9 +3,11 @@
 
 #include <QApplication>
 
-void initQt();
+import oss;
 
 int main(int argc, char *argv[]) {
+    EndPoints::init();
+
     QApplication a(argc, argv);
     auto login = new LoginSplashDialog;
     if (login->exec() == QDialog::Accepted) {
