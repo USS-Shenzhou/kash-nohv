@@ -42,6 +42,8 @@ set(PROJECT_SOURCES
         include/gui/window/loginsplashdialog.h
         src/gui/window/loginsplashdialog.cpp
         src/gui/window/loginsplashdialog.ui
+        src/util/module.ixx
+        src/util/ThreadHelper.ixx
 
 )
 

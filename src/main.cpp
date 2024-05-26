@@ -3,7 +3,7 @@
 
 #include <QApplication>
 
-import oss;
+import oss.endpoints;
 
 int main(int argc, char *argv[]) {
     EndPoints::init();

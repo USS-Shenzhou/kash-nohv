@@ -3,8 +3,7 @@
 
 import oss;
 
-LoginSplashDialog::LoginSplashDialog(QWidget *parent)
-    : QDialog(parent), ui(new Ui::LoginSplashDialog) {
+LoginSplashDialog::LoginSplashDialog(QWidget *parent) : QDialog(parent), ui(new Ui::LoginSplashDialog) {
     ui->setupUi(this);
     ui->password->setEchoMode(QLineEdit::Password);
     setAttribute(Qt::WA_DeleteOnClose);
@@ -24,11 +23,5 @@ LoginSplashDialog::~LoginSplashDialog() {
 }
 
 void LoginSplashDialog::doLogin() {
-    ui->loginButton->setEnabled(false);
-    ui->loginButton->setText("正在连接到服务器...");
-    if (OssManager::login(*this)) {
-        accept();
-    } else {
-        //TODO
-    }
+    OssManager::loginFromUi(*this);
 }
