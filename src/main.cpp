@@ -1,12 +1,14 @@
-#include "../include/gui/window/kashnohv.h"
-#include "../include/gui/window/loginsplashdialog.h"
+#include "gui/window/kashnohv.h"
+#include "gui/window/loginsplashdialog.h"
 
 #include <QApplication>
 
-import oss.endpoints;
+#include "oss/EndPoints.h"
+#include "oss/OssManager.h"
 
 int main(int argc, char *argv[]) {
     EndPoints::init();
+    OssManager::init();
 
     QApplication a(argc, argv);
     auto login = new LoginSplashDialog;

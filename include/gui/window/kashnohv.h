@@ -2,6 +2,7 @@
 #define KASHNOHV_H
 
 #include <QMainWindow>
+#include "ui_kashnohv.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

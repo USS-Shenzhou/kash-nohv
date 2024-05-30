@@ -1,9 +1,11 @@
 #include "gui/window/loginsplashdialog.h"
-#include "ui_loginsplashdialog.h"
 
-import oss;
+#include "oss/EndPoints.h"
+#include "oss/OssManager.h"
 
-LoginSplashDialog::LoginSplashDialog(QWidget *parent) : QDialog(parent), ui(new Ui::LoginSplashDialog) {
+
+LoginSplashDialog::LoginSplashDialog(QWidget *parent) :
+    QDialog(parent), ui(new Ui::LoginSplashDialog) {
     ui->setupUi(this);
     ui->password->setEchoMode(QLineEdit::Password);
     setAttribute(Qt::WA_DeleteOnClose);
@@ -12,7 +14,7 @@ LoginSplashDialog::LoginSplashDialog(QWidget *parent) : QDialog(parent), ui(new 
 
     setFixedSize(800, 450);
 
-    ui->endpointSelect->addItems(EndPoints::getnameAndUrl().keys());
+    ui->endpointSelect->addItems(EndPoints::getNameAndUrl().keys());
     ui->endpointSelect->setCurrentIndex(-1);
 
     connect(ui->loginButton, SIGNAL(clicked(bool)), this, SLOT(doLogin()));
@@ -23,5 +25,7 @@ LoginSplashDialog::~LoginSplashDialog() {
 }
 
 void LoginSplashDialog::doLogin() {
-    OssManager::loginFromUi(*this);
+    if (ui->endpointSelect->currentIndex() > -1 && !ui->account->text().isEmpty() && !ui->password->text().isEmpty()) {
+        OssManager::loginFromUi(*this);
+    }
 }

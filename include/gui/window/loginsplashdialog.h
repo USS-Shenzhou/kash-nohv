@@ -2,6 +2,7 @@
 #define LOGINSPLASHDIALOG_H
 
 #include <QDialog>
+#include "ui_loginsplashdialog.h"
 
 namespace Ui {
     class LoginSplashDialog;
